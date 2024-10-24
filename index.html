@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Unidades CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Conversor de Unidades (px, rem, em, %)</h1>
+
+    <div class="converter">
+      <label for="value">Ingresa un valor:</label>
+      <input type="number" id="value" placeholder="Ej: 16" min="0" />
+
+      <label for="from-unit">Convertir de:</label>
+      <select id="from-unit">
+        <option value="px">px (píxeles)</option>
+        <option value="rem">rem</option>
+        <option value="em">em</option>
+        <option value="%">%</option>
+      </select>
+
+      <label for="to-unit">Convertir a:</label>
+      <select id="to-unit">
+        <option value="px">px (píxeles)</option>
+        <option value="rem">rem</option>
+        <option value="em">em</option>
+        <option value="%">%</option>
+      </select>
+
+      <button onclick="convert()">Convertir</button>
+
+      <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
