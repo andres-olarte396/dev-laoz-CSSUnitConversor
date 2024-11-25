@@ -4,35 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversor de Unidades CSS</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../dev-laoz-WaveArtCSS/src/theme.css" />
+    <link rel="stylesheet" href="../dev-laoz-WaveArtCSS/src/base.css" />
+    <link rel="stylesheet" href="../dev-laoz-WaveArtCSS/src/components.css" />
   </head>
   <body>
-    <h1>Conversor de Unidades (px, rem, em, %)</h1>
+    <header>
+      <h1>Conversor de Unidades (px, rem, em, %)</h1>
+      <p>Este ejemplo muestra los estilos básicos aplicados.</p>
+    </header>
+    <main>
+      <div class="converter">
+        <label for="value">Ingresa un valor:</label>
+        <input type="number" id="value" placeholder="Ej: 16" min="0" />
 
-    <div class="converter">
-      <label for="value">Ingresa un valor:</label>
-      <input type="number" id="value" placeholder="Ej: 16" min="0" />
+        <label for="from-unit">Convertir de:</label>
+        <select id="from-unit">
+          <option value="px">px (píxeles)</option>
+          <option value="rem">rem</option>
+          <option value="em">em</option>
+          <option value="%">%</option>
+        </select>
 
-      <label for="from-unit">Convertir de:</label>
-      <select id="from-unit">
-        <option value="px">px (píxeles)</option>
-        <option value="rem">rem</option>
-        <option value="em">em</option>
-        <option value="%">%</option>
-      </select>
+        <label for="to-unit">Convertir a:</label>
+        <select id="to-unit">
+          <option value="px">px (píxeles)</option>
+          <option value="rem">rem</option>
+          <option value="em">em</option>
+          <option value="%">%</option>
+        </select>
 
-      <label for="to-unit">Convertir a:</label>
-      <select id="to-unit">
-        <option value="px">px (píxeles)</option>
-        <option value="rem">rem</option>
-        <option value="em">em</option>
-        <option value="%">%</option>
-      </select>
+        <button onclick="convert()">Convertir</button>
 
-      <button onclick="convert()">Convertir</button>
+        <div class="result" id="result"></div>
+      </div>
+    </main>
+    <footer>
+      <p>© 2024 Mi Negocio. Todos los derechos reservados.</p>
+    </footer>
 
-      <div class="result" id="result"></div>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
